@@ -1,0 +1,55 @@
+{
+  "model_name": "validation_frame_xy",
+
+  "nodes": {
+    "1": [0.0, 0.0, 0.0],
+    "2": [0.0, 10.0, 0.0],
+    "3": [8.0, 10.0, 0.0]
+  },
+
+  "elements": {
+    "1": {
+      "type": "3D_frame",
+      "nodes": [1, 2],
+      "E": 200000000.0,
+      "A": 0.00474,
+      "I": 0.0000222,
+      "J": 0.00001
+    },
+    "2": {
+      "type": "3D_frame",
+      "nodes": [2, 3],
+      "E": 200000000.0,
+      "A": 0.00474,
+      "I": 0.0000222,
+      "J": 0.00001
+    }
+  },
+
+  "supports": {
+    "1": ["ux", "uy", "uz", "rx", "ry", "rz"],
+    "2": ["uz", "rx", "ry"],
+    "3": ["ux", "uy", "uz", "rx", "ry"]
+  },
+
+  "nodal_loads": {},
+
+  "member_loads": {
+    "1": {
+      "wx": 24.0
+    },
+    "2": {
+      "Py": -75.0,
+      "aP": 4.0
+    }
+  },
+  "releases": {
+    "1": ["j_ry"],
+    "2": ["i_ry"]
+  },
+  "prescribed_displacements": {},
+  "temperature_loads": {},
+  "fabrication_errors": {}
+}
+
+
